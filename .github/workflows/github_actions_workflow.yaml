@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  DemoSonarCloudSCan:
+  DemoSonarCloudScan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,6 +16,6 @@ jobs:
             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-              -Dsonar.organization=rekhugopal
-              -Dsonar.projectKey=SonarCloudCodeAnalyisis
+              -Dsonar.organization=camilo959
+              -Dsonar.projectKey=SonarCloudCodeAnalyisisMe
               -Dsonar.python.coverage.reportPaths=coverage.xml
